@@ -1,5 +1,18 @@
 ## JavaScript
-#### It is a *Just In Time* compiled language. That is done by the engine behind browsers. To run Java on a server you need a tool like NodeJS.
+> It is a *Just In Time* compiled language. That is done by the engine behind browsers. To run Java on a server you need a tool like NodeJS.
+
+## Table of contents
+1. [Basic operations](#basic-operations)
+2. [Variables](#variables---there-is-no-need-for-data-type-annotations)
+3. [Objects](#objects)
+    1. [Prototypal inheritance](#prototypal-inheritance)
+    2. [Destructuring](#destructuring)
+    3. [Combining](#combine-2-objects)
+    4. [Optional chaining](#optional-chaining)
+    5. [Truthy and falsy values](#truthy-and-falsey-values)
+        1. [Coalescing operator](#coalescing-operator)
+    6. [Array tricks](#array-tricks)
+4. [Functions](#functions)
 
 ### Basic Operations
 `console.log('Hi mom');` - **To print**
@@ -19,7 +32,7 @@ There are 7 primitive data types built-in:
 `let randomNum = 23;` - **It can be reassigned**\
 `const name = 'George'` - **Cannot be assigned**\
 
-> If a variable is defined inside a function it becomes a local variable and cannot be used outside the function
+> If a variable is defined inside a function it becomes a local variable and cannot be used outside the function, unsless it's made into a closure (see below)
 
 ### Objects
 - Defined using braces `{}`
@@ -150,4 +163,105 @@ The `??` operator has a more limited set of values so that only `null` and `unde
 const x = '';
 
 const val = x ?? 'default';
+```
+
+#### Array tricks
+```JS
+const arr = Array(100).fill(0); // I will create an array with 100 zeroes
+
+// .map is a functions that acts on an array
+const arr2 = Array(100).fill(0).map((_, i) => i + 1); // The .map function will act on each element of the array and add 1. So in the end it will be an array ranging from 0 - 99
+
+// To get all the unique elements of an array using the Spread syntax
+const arr = [1, 2, 3, 3, 3, 4, 5];
+const unique = [..new Set(arr)]; // I will create a new array if it's wrapped in '[]'
+
+// Loop over an array
+for(const val of arr) {
+    console.log(val);
+}
+
+// To get the INDEX and Value of an array
+for(const [i, val] of arr.entries()) {
+    console.log(i, val);
+}
+
+// Array methods
+arr.forEach() // perform a loop of an array and provides value and index
+arr.map() // convert the values in an array to a different value
+arr.filter() // to get rid of unwanted values
+arr.find() // find specific values
+arr.findIndex() // find specific index
+arr.reduce() // take an entire array and calculate a single value from it
+```
+
+### Functions
+Functions are objects that can be used as variables and passed around to other funtions
+A function can be defined at the bottom and can still be used anywhere in the code
+```JS
+// function declaration
+function sayHi(message) {
+    return 'Said...' + message;
+} 
+
+// function expression. Defined as a variable so it cannot be referenced until it's reached in the code
+const sayHi = function(message) {
+    return 'Said ...' + message;
+} 
+
+// Anonymous function
+const annon = arr.map(function(val) {
+    return val * 2;
+})
+
+// Higher order function
+// Are functions that take another function as an argument or return a function
+function funWrapper(callback) {
+    callback('Called by wrapper');
+}
+
+funWrapper(sayHi);
+funWrapper(m => console.log(m));
+
+function funCreator() {
+    return function(message) {
+        return 'Said ...' + message;
+    }
+}
+
+const fn = creator();
+fn('Hello!')
+```
+- Closures
+
+A function that only depends on it's own arguments and internal data, when it's called it gets pushed to the `Call stack` where it's executed and it's internal memory is only saved until after it's executed and popped off the `Call stack`
+```JS
+function pureFun(a, b) {
+    return a + b;
+}
+```
+
+Closures are functions that can access values outside their own curly braces
+Closures are stored in the `Heap memory`. They are kept indefinetly until the Garbage collector decides to scrap it
+```JS
+let b = 3;
+
+function impureFun(a) {
+    return a + b;
+}
+
+// If you have an object inside a function that you want to access outside of that function
+// you can create a new function within, thus it will be stored in the 'Heap memory'
+
+function outer() {
+    let x = 1
+    function inner() {
+        x = x + 1
+    }
+    return inner;
+}
+
+const incrementX = outer();
+incrementX(); // x = 2
+incrementX(); // x = 3
 ```
