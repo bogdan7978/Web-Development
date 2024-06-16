@@ -15,7 +15,6 @@ function search(arr, target) { // using the 'export' term will allow the funtion
 // and from there go backwards or forwards depending where you landed
 
 function search2(arr, target, start=0, end=arr.length-1) { //define a start and end as well
-
     console.log(start, end);
 
     if (start > end) {
