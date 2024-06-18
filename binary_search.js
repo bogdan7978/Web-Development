@@ -38,5 +38,5 @@ function search2(arr, target, start=0, end=arr.length-1) { //define a start and 
     }
 }
 
-console.log(search(arr, 'z'));
+// console.log(search(arr, 'z'));
 console.log(search2(arr, 'd'));
