@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "This is a repository to learn and practice JS following the course from @Fireship.io and not just\\\r Thanks to @JeffDelaney",
   "main": "app.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^1.6.0"
+  }
 }
