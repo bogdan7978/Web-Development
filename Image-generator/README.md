@@ -1,7 +1,7 @@
 # AI Image Generator
 ## Using OpenAI's Dalle-3
 
-***This web app was built following the @fireship-io tutorial, big thanks to @codediodeio***\
+***This web app was built following the [Fireship.io](https://fireship.io/) tutorial, big thanks to [Jeff Delaney](https://github.com/codediodeio)***\
 **Painfully and also thankfully the tutorial was from the end of `October 2022`, so it required some modifications and it allowed me to fully understand how it works and further develop my debugging skills**
 
 If you're looking to build this yourself here's some steps you need to take aside from cloning the repository
