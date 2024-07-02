@@ -30,7 +30,7 @@ There are 7 primitive data types built-in:
 > Anything that is not a primitive, is an object (arrays, functions...)
 
 `let randomNum = 23;` - **It can be reassigned**\
-`const name = 'George'` - **Cannot be assigned**\
+`const name = 'George'` - **Cannot be reassigned**
 
 > If a variable is defined inside a function it becomes a local variable and cannot be used outside the function, unsless it's made into a closure (see below)
 
