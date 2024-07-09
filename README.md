@@ -1,1 +1,1 @@
-A repository to learn and practice JavaScript
+A repository to learn and practice Web Development
