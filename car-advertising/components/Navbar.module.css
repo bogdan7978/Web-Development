@@ -1,0 +1,107 @@
+.nav {
+    background-color: rgb(255, 255, 255);
+    font-size: 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-color: red;
+    padding: 0 10vw;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    border-style: solid;
+    border-color: yellow;
+}
+  
+  @media (max-width: 1024px) {
+    .nav {
+      padding: 0 10vw;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav {
+      padding: 0 5vw;
+      height: 60px;
+    }
+    .logo {
+        width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav {
+      padding: 0 5vw;
+      height: 50px;
+    }
+  }
+  
+  .links {
+    list-style: none;
+    display: flex;
+    border-style: solid;
+    border-color: green;
+    font-size: 15px;
+
+  }
+  
+  .links li {
+    font-weight: 700;
+    color: black;
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+    border-style: solid;
+    border-color: blue;
+  }
+
+  .links li:hover {
+    color: var(--hover-color);
+  }
+  
+  /* Hide links on smaller screens */
+  @media (max-width: 768px) {
+    .links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 1vw;
+      background-color: var(--secondary-color);
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 1rem;
+    }
+  
+    /* When burger menu is open, display the links */
+    .links.open {
+      display: flex;
+    }
+  }
+  
+  /* Burger Menu */
+  .burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+  }
+  
+  .burger .line {
+    width: 25px;
+    height: 2.5px;
+    background-color: rgb(0, 0, 0);
+    margin: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+  }
+  

@@ -1,0 +1,45 @@
+export default function Campaign() {
+    return (
+        <div>
+            <h1>
+                Campaign
+            </h1>
+            <h2>
+                hey
+            </h2>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+            <h1>
+                Campaign
+            </h1>
+        </div>
+    )
+}

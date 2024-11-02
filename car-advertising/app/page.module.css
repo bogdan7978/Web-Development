@@ -1,0 +1,89 @@
+.main {
+    border-style: solid;
+    border-color: red;
+    /* padding: 0 10vw; */
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 20vh;
+    background-color:rgb(28, 28, 28);
+    color: white;
+    height: 90vh;
+    width: 100%;
+    border-style: solid;
+    border-color: aqua;
+}
+
+.hero_title {
+    border-style: solid;
+    border-color: antiquewhite;
+    width: 40vw;
+    max-width: 100%;
+}
+
+.hero_main_title {
+    padding: 0 5vw;
+}
+
+.hero_subtitle {
+    padding: 0 5vw;
+}
+
+.hero_image {
+    width: 60vw;
+    padding-left: 40px;
+    height: auto;
+    border-style: solid;
+    border-color: red;
+}
+
+.catch_phrase {
+    border-style: dashed;
+    border-color: purple;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    font-size: 28px;
+    background-color: rgb(215, 215, 215);
+}
+
+.list {
+
+    border-style: solid;
+    border-color: rgb(0, 255, 0);
+    width: 60%;
+    margin: 0 auto;
+    background-color:antiquewhite;
+}
+
+.list H2 {
+    text-align: center;
+}
+
+.list_items {
+    border-style: dashed;
+    border-color:blue;
+    display: flex;
+    flex-wrap: wrap;  /* Wrap items into the next line */
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 10rem; /* Remove default padding */
+}
+
+.list_items li {
+    border-style: dashed;
+    border-color:rgb(237, 255, 78);
+    width: 50%; /* Make each list item take half the width */
+    margin-left:auto;
+    margin-right: auto;   
+    padding-left: 20px; /* Add space for bullet points */
+}
+
+.dropdown {
+    display:flex;
+    justify-content: center;
+    background-color: azure;
+}
